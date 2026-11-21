@@ -1,0 +1,8 @@
+# Fichiers de configuration sensibles (clés API, secrets)
+visio-rdv/config.php
+config.php
+
+# Données clients / réservations / compteurs dynamiques
+visio-rdv/data/reservations.json
+*.log
+error_log
