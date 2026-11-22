@@ -1553,6 +1553,49 @@
       .audio-player-card audio::-webkit-media-controls-time-remaining-display {
         color: #e8c96d;
       }
+      .annonce-guidances {
+        margin: 0 0 1.2rem;
+        text-align: center;
+      }
+      .guidances-arrow {
+        text-align: center;
+        color: var(--or-clair);
+        font-size: 1.25rem;
+        line-height: 1;
+        margin: 0.35rem 0 0.55rem;
+        opacity: 0.9;
+      }
+      .annonce-guidances a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        color: var(--or-clair);
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 500;
+        padding: 0.45rem 1rem;
+        background: rgba(201, 168, 76, 0.1);
+        border: 1px solid rgba(201, 168, 76, 0.35);
+        border-radius: 25px;
+        transition: all 0.3s ease;
+      }
+      .annonce-guidances a:hover {
+        background: rgba(201, 168, 76, 0.22);
+        border-color: var(--or-clair);
+        transform: translateY(-1px);
+      }
+      .badge-gratuit {
+        display: inline-block;
+        background: linear-gradient(135deg, var(--or-clair), var(--or));
+        color: var(--nuit);
+        font-weight: 700;
+        font-size: 0.78rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 0.15rem 0.55rem;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(232, 201, 109, 0.35);
+      }
     </style>
     <!-- Google tag (gtag.js) -->
     <script
@@ -1875,7 +1918,7 @@
                 flex-wrap: wrap;
                 gap: 0.5rem;
                 justify-content: flex-start;
-                margin-bottom: 1.2rem;
+                margin-bottom: 0.4rem;
               "
             >
               <span
@@ -1922,6 +1965,15 @@
               >
              
             </div>
+
+            <div class="guidances-arrow" aria-hidden="true">↓</div>
+
+            <p class="annonce-guidances">
+              <a href="guidances-generales.html">
+                Découvrez les guidances générales
+                <span class="badge-gratuit">gratuites</span> en vidéo
+              </a>
+            </p>
 
             <!-- Encart d'accroche / Constat -->
             <div
