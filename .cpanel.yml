@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/jiph2812/public_html/latelierdecesames.fr/
+    - /bin/mkdir -p $DEPLOYPATH
+    - /usr/bin/rsync -rtv --exclude='.git/' --exclude='.gitignore' --exclude='.github/' --exclude='.cpanel.yml' --exclude='/config.php' --exclude='*.log' --exclude='error_log' ./ $DEPLOYPATH
