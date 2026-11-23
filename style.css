@@ -101,6 +101,41 @@ nav{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(11,13,26
 .hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer;background:none;border:none;padding:10px;min-width:44px;min-height:44px;}
 .hamburger span{width:25px;height:2px;background:var(--or);border-radius:2px;transition:0.3s;}
 
+/* --- Sous-menu Guidances --- */
+nav .nav-links .nav-dropdown { position: relative; }
+nav .nav-links .nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 245px;
+  list-style: none;
+  background: rgba(11, 13, 26, 0.98);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  border-radius: 10px;
+  padding: 0.5rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55);
+  z-index: 1200;
+}
+nav .nav-links .nav-dropdown:hover > .nav-dropdown-menu,
+nav .nav-links .nav-dropdown:focus-within > .nav-dropdown-menu {
+  display: block;
+}
+nav .nav-links .nav-dropdown-menu li { width: 100%; }
+nav .nav-links .nav-dropdown .nav-dropdown-menu a {
+  --chakra-color: var(--texte);
+  --chakra-bg: rgba(107, 207, 230, 0.12);
+  color: var(--texte);
+  padding: 0.6rem 0.9rem;
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+nav .nav-links .nav-dropdown .nav-dropdown-menu a:hover,
+nav .nav-links .nav-dropdown .nav-dropdown-menu a.active {
+  color: #6bcfe6;
+  background: rgba(107, 207, 230, 0.12);
+}
+
 /* --- Pages & Animations --- */
 .page-section{display:none;padding-top:70px;min-height:100vh;animation:fadeIn 0.5s ease;}
 .page-section.active{display:block;}
@@ -326,6 +361,19 @@ footer{background:#070810;border-top:1px solid rgba(201,168,76,0.15);padding:4re
   .hamburger{display:flex;}
   .nav-links{display:none;position:fixed;top:70px;left:0;right:0;background:rgba(11,13,26,0.98);flex-direction:column;padding:2rem;gap:0.5rem;border-bottom:1px solid rgba(201,168,76,0.2);}
   .nav-links.open{display:flex;}
+  nav .nav-links .nav-dropdown { width: 100%; }
+  nav .nav-links .nav-dropdown-menu {
+    display: block;
+    position: static;
+    min-width: 0;
+    background: transparent;
+    border: none;
+    border-left: 2px solid rgba(107, 207, 230, 0.35);
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0.25rem 0 0.25rem 1rem;
+    margin: 0.25rem 0 0.5rem 0.6rem;
+  }
 }
 
 @media(max-width:768px){

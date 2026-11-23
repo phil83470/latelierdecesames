@@ -40,6 +40,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://latelierdecesames.fr/guidances-generales.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://latelierdecesames.fr/ombre.html</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
