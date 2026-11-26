@@ -2627,17 +2627,6 @@
           </div>
 
           <!-- Grille des témoignages chargés dynamiquement -->
-          <div
-            id="testimonials-loading"
-            style="
-              text-align: center;
-              color: var(--gris-doux);
-              font-style: italic;
-              padding: 2rem 0;
-            "
-          >
-            ✦ Chargement des témoignages... ✦
-          </div>
           <div class="testimonial-grid" id="testimonials-container"></div>
 
           <!-- Actions de la section -->
@@ -6226,8 +6215,7 @@
           } catch (error) {
             console.error(error);
             if (loading) {
-              loading.textContent =
-                "✦ Les témoignages s'afficheront après le déploiement sur votre hébergement o2switch. ✦";
+              loading.style.display = "none";
             }
           }
         }
