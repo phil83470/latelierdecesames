@@ -196,7 +196,7 @@
         margin: 0 auto;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         height: 70px;
       }
       .nav-logo {
@@ -665,6 +665,9 @@
 
       /* --- Responsive --- */
       @media (max-width: 1024px) {
+        .nav-inner {
+          justify-content: flex-end;
+        }
         .footer-grid {
           grid-template-columns: 1fr 1fr;
         }
@@ -722,7 +725,6 @@
   <body>
     <nav>
       <div class="nav-inner">
-        <a href="index.html" class="nav-logo">✦ L' Atelier de ces âmes</a>
         <button
           class="hamburger"
           id="hamburger"
