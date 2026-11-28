@@ -2277,91 +2277,49 @@
           <div class="toc">
             <p class="toc-title">✦ Table des matières ✦</p>
             <div class="toc-grid">
-              <a
-                href="#page-apropos"
-                class="toc-item"
-                onclick="
-                  showPage('apropos');
-                  return false;
-                "
+              <a href="apropos.html" class="toc-item"
                 ><span class="toc-num">01</span>
                 <div class="toc-text">
                   <strong>À propos</strong
                   ><span>Qui suis-je, mon chemin, ma vision</span>
                 </div></a
               >
-              <a
-                href="#page-ressentis"
-                class="toc-item"
-                onclick="
-                  showPage('ressentis');
-                  return false;
-                "
+              <a href="ressentis.html" class="toc-item"
                 ><span class="toc-num">02</span>
                 <div class="toc-text">
                   <strong>Ressentis &amp; Intuition</strong
                   ><span>Comprendre et accueillir ce qui vibre en toi</span>
                 </div></a
               >
-              <a
-                href="#page-synchronicites"
-                class="toc-item"
-                onclick="
-                  showPage('synchronicites');
-                  return false;
-                "
+              <a href="synchronicites.html" class="toc-item"
                 ><span class="toc-num">03</span>
                 <div class="toc-text">
                   <strong>Synchronicités &amp; Signes</strong
                   ><span>Reconnaître les messages de l'univers</span>
                 </div></a
               >
-              <a
-                href="#page-guidances"
-                class="toc-item"
-                onclick="
-                  showPage('guidances');
-                  return false;
-                "
+              <a href="guidances.html" class="toc-item"
                 ><span class="toc-num">04</span>
                 <div class="toc-text">
                   <strong>Guidances intérieures</strong
                   ><span>Écouter, recevoir, faire confiance</span>
                 </div></a
               >
-              <a
-                href="#page-ombre"
-                class="toc-item"
-                onclick="
-                  showPage('ombre');
-                  return false;
-                "
+              <a href="ombre.html" class="toc-item"
                 ><span class="toc-num">05</span>
                 <div class="toc-text">
                   <strong>Accueillir l'Ombre</strong
                   ><span>Regarder ses peurs sans se juger</span>
                 </div></a
               >
-              <a
-                href="#page-accompagnements"
-                class="toc-item"
-                onclick="
-                  showPage('accompagnements');
-                  return false;
-                "
+              <a href="accompagnements.html" class="toc-item"
                 ><span class="toc-num">06</span>
                 <div class="toc-text">
                   <strong>Accompagnements</strong
                   ><span>Séances, ateliers et ressources</span>
                 </div></a
               >
-              <a
-                href="#page-contact"
-                class="toc-item"
-                onclick="
-                  showPage('contact');
-                  return false;
-                "
+              <a href="contact.html" class="toc-item"
                 ><span class="toc-num">07</span>
                 <div class="toc-text">
                   <strong>Contact &amp; Réservation</strong
@@ -2588,20 +2546,20 @@
               flex-wrap: wrap;
             "
           >
-            <button
-              type="button"
+            <a
+              href="accompagnements.html"
               class="btn-primary"
-              onclick="showPage('accompagnements')"
+              style="text-decoration: none"
             >
               Découvrir mes accompagnements
-            </button>
-            <button
-              type="button"
+            </a>
+            <a
+              href="contact.html"
               class="btn-secondary"
-              onclick="showPage('contact')"
+              style="text-decoration: none"
             >
               Réserver une séance
-            </button>
+            </a>
           </div>
           <p class="bottom-nav">
             <a href="index.html">Accueil</a><span class="sep">✦</span>
@@ -2637,13 +2595,13 @@
             >
               Laisser un avis
             </button>
-            <button
-              type="button"
+            <a
+              href="accompagnements.html"
               class="btn-primary"
-              onclick="showPage('accompagnements')"
+              style="text-decoration: none"
             >
               Je veux un accompagnement
-            </button>
+            </a>
           </div>
 
           <!-- Formulaire pour laisser un avis -->
@@ -3674,7 +3632,7 @@
             >
               <div style="text-align: center; max-width: 360px">
                 <img
-                  src="images/heliot-bebe.png"
+                  src="images/heliot-bebe.jpg"
                   alt="Héliot bébé - Guide spirituel"
                   width="360"
                   height="450"
@@ -6065,9 +6023,14 @@
         const hash = window.location.hash;
         if (hash && hash.startsWith("#page-")) {
           const pageName = hash.replace("#page-", "");
-          showPage(pageName, true);
+          if (pageName && pageName !== "accueil") {
+            window.location.replace(pageName + ".html");
+            return;
+          }
+          showPage("accueil", true);
         } else if (hash && hash.startsWith("#ap-")) {
-          scrollToAnchor(hash.replace("#", ""));
+          window.location.replace("apropos.html" + hash);
+          return;
         } else {
           showPage("accueil");
         }
