@@ -273,6 +273,8 @@ footer{background:#070810;border-top:1px solid rgba(201,168,76,0.15);padding:4re
 .footer-info a { color: #c9a84c; text-decoration: none; }
 .footer-bottom{max-width:1100px;margin:0 auto;padding-top:2rem;border-top:1px solid rgba(201,168,76,0.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
 .footer-bottom p{color:var(--gris-doux);font-size:0.8rem;}
+.footer-credit{display:inline-flex;align-items:center;justify-content:center;gap:0.7rem;color:var(--gris-doux);font-size:0.8rem;opacity:0.78;}
+.footer-credit img{width:44px;height:44px;border-radius:8px;object-fit:cover;border:1px solid rgba(201,168,76,0.25);box-shadow:0 2px 8px rgba(0,0,0,0.35);}
 .footer-legal{display:flex;gap:1.5rem;}
 .footer-legal a{color:var(--gris-doux);text-decoration:none;font-size:0.8rem;transition:color 0.3s;}
 .footer-legal a:hover{color:var(--or);}
